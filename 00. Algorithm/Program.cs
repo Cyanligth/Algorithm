@@ -79,7 +79,7 @@
         // n = 1000		    1	     1000	1,000,000
         // Big-O		 O(1)	     O(n)	   O(n^2)
 
-        // O(1) > O(log n) > O(n) > O(n log n) > O(n^2) > O(n^3) > O(2^n)
+        // O(1) > O(log n) > O(n) > O(n log n) > O(n^2) > O(n^3) > O(2^n) > 0(n!)
         //  여기까지가 좋음 || 여기까지는 어쩔 수 없으면 씀 || 이건 좀....
 
         static void Main(string[] args)
