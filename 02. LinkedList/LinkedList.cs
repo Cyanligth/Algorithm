@@ -138,7 +138,12 @@ namespace DataStructure
             if (node.linkList != this)      // 받아온 값이 현재 연결리스트에 없는 경우
                 throw new InvalidOperationException("node");        // 오류 반환
             if (node == null)       // 받아온 값이 공백이면
-                throw new ArgumentNullException(nameof(node));      // 오류 반환           
+                throw new ArgumentNullException(nameof(node));      // 오류 반환
+
+            if (node == head)       // 받아온 값이 머리라면
+                
+            if (node == tail)       // 받아온 값이 꼬리라면
+                
 
             if (node.prev != null)      // 받아온 노드의 이전이 공백을 가리키고 있지 않다면 == 머리가 아니라면
                 node.prev.next = node.next;     // 받아온 노드의 이전이 가리키는 노드의 다음은 노드의 다음이 가리키는 주소를 가리킨다.
