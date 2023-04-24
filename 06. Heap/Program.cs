@@ -1,4 +1,6 @@
-﻿namespace _06._Heap
+﻿using System.ComponentModel;
+
+namespace _06._Heap
 {
     internal class Program
     {
@@ -42,6 +44,7 @@
 
         static void Main(string[] args)
         {
+            /*
             // 기본 int 우선순위(오름차순) 적용
             DataStructure.PriorityQueue<string, int> pq1 = new DataStructure.PriorityQueue<string, int>();
 
@@ -53,7 +56,6 @@
 
             while (pq1.Count > 0) Console.WriteLine(pq1.Dequeue()); // 우선순위가 높은 순서대로 데이터 출력
 
-
             // 수정 int 우선순위 적용
             DataStructure.PriorityQueue<string, int> pq2 = new DataStructure.PriorityQueue<string, int>(Comparer<int>.Create((a, b) => b - a));
 
@@ -64,6 +66,34 @@
             pq2.Enqueue("데이터5", 4);
 
             while (pq2.Count > 0) Console.WriteLine(pq2.Dequeue()); // 우선순위가 높은 순서대로 데이터 출력
+            */
+            PriorityQueue<string, int> amb = new PriorityQueue<string, int>();
+            string name;
+            int goldenTime;
+            Console.Write("환자 수 입력 : ");
+            int count = int.Parse(Console.ReadLine());
+            int a = 0;
+            while(a < count)
+            {
+                Console.Write("환자 이름 : ");
+                name = Console.ReadLine();
+                Console.Write("골든타임 : ");
+                goldenTime = int.Parse(Console.ReadLine());
+                amb.Enqueue(name, goldenTime);
+                a++;
+                Console.Clear();
+            }
+            Console.WriteLine("치료순서");
+            for (int i = 0; i < count; i++)
+                Console.WriteLine(i+1 +". "+ AMB(amb));
+            Console.WriteLine("치료를 시작합니다");
+
+        }
+
+        static string AMB(PriorityQueue<string, int> amb)
+        {
+            string name = amb.Dequeue();
+            return name;
         }
     }
 }
