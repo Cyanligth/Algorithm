@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. LinkedList", "02. Linke
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Interator", "03. Interator\03. Interator.csproj", "{B2942627-4A40-4D30-A278-C310ACA02BC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Stack", "04. Stack\04. Stack.csproj", "{E5E68EF0-6D0C-48D8-AAC5-A3B2F2E43FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Stack", "04. Stack\04. Stack.csproj", "{E5E68EF0-6D0C-48D8-AAC5-A3B2F2E43FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Queue", "05. Queue\05. Queue.csproj", "{504666F2-8F86-4286-9E6E-F1061DE9B33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Queue", "05. Queue\05. Queue.csproj", "{504666F2-8F86-4286-9E6E-F1061DE9B33C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Heap", "06. Heap\06. Heap.csproj", "{8DD916F9-3AB3-439F-A54F-C00C2D36F99C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{504666F2-8F86-4286-9E6E-F1061DE9B33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{504666F2-8F86-4286-9E6E-F1061DE9B33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{504666F2-8F86-4286-9E6E-F1061DE9B33C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD916F9-3AB3-439F-A54F-C00C2D36F99C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD916F9-3AB3-439F-A54F-C00C2D36F99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD916F9-3AB3-439F-A54F-C00C2D36F99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD916F9-3AB3-439F-A54F-C00C2D36F99C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
