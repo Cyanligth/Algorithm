@@ -66,7 +66,7 @@ namespace _06._Heap
             pq2.Enqueue("데이터5", 4);
 
             while (pq2.Count > 0) Console.WriteLine(pq2.Dequeue()); // 우선순위가 높은 순서대로 데이터 출력
-            */
+            
             PriorityQueue<string, int> amb = new PriorityQueue<string, int>();
             string name;
             int goldenTime;
@@ -87,7 +87,46 @@ namespace _06._Heap
             for (int i = 0; i < count; i++)
                 Console.WriteLine(i+1 +". "+ AMB(amb));
             Console.WriteLine("치료를 시작합니다");
+            */
+            DataStructure.PriorityQueue<int, int> pq = new DataStructure.PriorityQueue<int, int>();
+            DataStructure.PriorityQueue<int, int> big = new DataStructure.PriorityQueue<int, int>();
+            DataStructure.PriorityQueue<int, int> small = new DataStructure.PriorityQueue<int, int>();
+            int i = 1;//int.Parse(Console.ReadLine());
+            int p = 10;//int.Parse(Console.ReadLine());
+            int middle = 0;
+            do
+            {
+                middle = i;
+                i++;
+                if (middle >= i)
+                    small.Enqueue(i,i);
+                else 
+                    big.Enqueue(i,i);
 
+
+            } while (i <= p) ;
+
+                small.InTheMax();  InTheLow(big);
+            if(small.Count+1 == big.Count)
+            {
+                middle = small.InTheMax();
+            }
+            else if(small.Count == big.Count+1)
+            {
+                middle = InTheLow(big);
+            }
+
+            // 1만을 반으로 갈라서 5천으로 한다음 5천보다 큰걸 전부 빅에 떄려박은다음 카운트로 세서 중간이 될떄까지 한다.
+        }
+
+        static void InTheMiddle(DataStructure.PriorityQueue<int, int> pq, int max, int min)
+        {
+
+            Console.WriteLine();
+        }
+        static int InTheLow(DataStructure.PriorityQueue<int, int> pq)
+        {
+            return pq.Peek();
         }
 
         static string AMB(PriorityQueue<string, int> amb)

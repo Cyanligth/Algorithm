@@ -116,5 +116,29 @@ namespace DataStructure
         {
             return index * 2 + 2;
         }
+
+        public TElement InTheMax()
+        {
+            TElement higher;
+            int index = 0;
+            while (index > node.Count)
+            {
+                int left = index * 2 + 1;
+                int right = index * 2 + 2;
+                if (right < node.Count)
+                {
+                    int high = comparer.Compare(node[left].Priority, node[right].Priority) > 0 ? left : right;
+                    index = high;
+                }
+                else if (left < node.Count)
+                {
+                    index = left;
+                }
+                else break;
+            }
+            higher = node[index].Element;
+            return higher;
+        }
+
     }
 }
