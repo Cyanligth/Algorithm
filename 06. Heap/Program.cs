@@ -96,25 +96,27 @@ namespace _06._Heap
             int middle = 0;
             do
             {
-                middle = i;
+                if (small.Count < big.Count)
+                {
+                    small.Enqueue(middle, middle);
+                    middle = InTheLow(big);
+                }
+                else if (small.Count > big.Count + 1)
+                {
+                    big.Enqueue(middle, middle);
+                    middle = small.InTheMax();
+                }
+                else middle = i;
+
                 i++;
                 if (middle >= i)
                     small.Enqueue(i,i);
                 else 
                     big.Enqueue(i,i);
-
-
+                
             } while (i <= p) ;
 
-                small.InTheMax();  InTheLow(big);
-            if(small.Count+1 == big.Count)
-            {
-                middle = small.InTheMax();
-            }
-            else if(small.Count == big.Count+1)
-            {
-                middle = InTheLow(big);
-            }
+            Console.WriteLine(middle);
 
             // 1만을 반으로 갈라서 5천으로 한다음 5천보다 큰걸 전부 빅에 떄려박은다음 카운트로 세서 중간이 될떄까지 한다.
         }
