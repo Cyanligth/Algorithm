@@ -95,6 +95,7 @@ namespace _07._BinarySearchTree
 
         static void Main(string[] args)
         {
+            /*
             DataStructure.BinarySearchTree<int> bst = new DataStructure.BinarySearchTree<int>();
             bst.Add(3);
             bst.Add(1);
@@ -106,6 +107,25 @@ namespace _07._BinarySearchTree
             bst.ReversePrint();
             bst.Remove(3);
             bst.Remove(4);
+            */
+            test();
+        }
+
+        static void test()
+        {
+            string cipher = "dfjardstddetckdaccccdegk";
+            int code = 4;
+            string answer = "";
+            char[] a = new char[cipher.Length];
+            char[] b = new char[a.Length / code];
+            int count = 0;
+            foreach (char c in cipher)
+                a[count++] = c;
+            count = 0;
+            for (int i = code; i <= a.Length; i = i + code)
+                b[count++] = a[i-1];
+            answer = string.Concat(b);
+            Console.WriteLine(answer);
         }
     }
 }
