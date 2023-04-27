@@ -92,4 +92,3 @@ namespace _09._DesignTechnique
         }
     }
 }
-}
