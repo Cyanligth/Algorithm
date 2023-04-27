@@ -10,17 +10,20 @@
          * 문제의 성질과 조건에 따라 알맞은 알고리즘 설계기법을 선택하여 사용
 		 ******************************************************/
         public enum Place { Left, Middle, Right }
-
-        public static void Move(int count, Place start, Place end)
+        public static int[,] result = new int[2,1000];
+        public static int n = 0;
+        public static void Move(int count, int start, int end)
         {
             if (count == 1)
             {
                 int plate = stick[(int)start].Pop();
                 stick[(int)end].Push(plate);
-                Console.WriteLine($"{start} 에서 {end} 로 {plate}번 고리 이동");
+                result[0,n] = start;
+                result[1,n] = end;
+                n++;
                 return;
             }
-            Place other = (Place)(3 - (int)start - (int)end);
+            int other = (int)(3 - (int)start - (int)end);
 
             Move(count - 1, start, other);
             Move(1, start, end);
@@ -36,16 +39,26 @@
             {
                 stick[i] = new Stack<int>();
             }
-            for(int i = 7; i > 0; i--)
+            for(int i = 3; i > 0; i--)
             {
                 stick[0].Push(i);
             }
+            Move(3, 0, 2);
 
-            Move(7,Place.Left, Place.Right);
-
+            /*
             Backtracking backtracking = new Backtracking();
             bool[,] b = new bool[8, 8];
             backtracking.NQueen(b);
+            */
+            Console.WriteLine(n);
+            for (int i = 0; i < n; i++)
+            {
+                for(int j = 0; j < result.GetLength(0); j++)
+                {
+                    Console.Write(result[j,i]+1 + " ");
+                }
+                Console.WriteLine("");
+            }
         }
     }
 }
