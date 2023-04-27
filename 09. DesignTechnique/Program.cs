@@ -42,6 +42,10 @@
             }
 
             Move(7,Place.Left, Place.Right);
+
+            Backtracking backtracking = new Backtracking();
+            bool[,] b = new bool[8, 8];
+            backtracking.NQueen(b);
         }
     }
 }

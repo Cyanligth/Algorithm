@@ -16,7 +16,7 @@ namespace _09._DesignTechnique
 		 ******************************************************/
 
         // 예시 - N개의 퀸(체스판의 서로 공격할 수 없는 퀸 N개 놓기)
-        private bool NQueen(bool[,] board, int y = 0)
+        public bool NQueen(bool[,] board, int y = 0)
         {
             int ySize = board.GetLength(0);
             int xSize = board.GetLength(1);
@@ -82,9 +82,9 @@ namespace _09._DesignTechnique
                 for (int x = 0; x < board.GetLength(1); x++)
                 {
                     if (board[y, x])
-                        Console.Write("Q");
+                        Console.Write("Ｑ");
                     else
-                        Console.Write('.');
+                        Console.Write('□');
                 }
                 Console.WriteLine();
             }
