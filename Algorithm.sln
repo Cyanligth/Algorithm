@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Searching", "11. Search
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12. ShortestPath", "12. ShortestPath\12. ShortestPath.csproj", "{604A8282-4F18-4C63-BB39-7374131ED14B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13. PathFinding", "13. PathFinding\13. PathFinding.csproj", "{F346C55D-C4C6-4C5F-BC5C-8EE66108235A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{604A8282-4F18-4C63-BB39-7374131ED14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{604A8282-4F18-4C63-BB39-7374131ED14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{604A8282-4F18-4C63-BB39-7374131ED14B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F346C55D-C4C6-4C5F-BC5C-8EE66108235A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F346C55D-C4C6-4C5F-BC5C-8EE66108235A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F346C55D-C4C6-4C5F-BC5C-8EE66108235A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F346C55D-C4C6-4C5F-BC5C-8EE66108235A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
